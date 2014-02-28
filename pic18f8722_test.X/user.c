@@ -18,6 +18,7 @@
 #endif
 
 #include "user.h"
+#include "UARTIntC.h"
 #include <plib.h>
 
 #define USE_OR_MASKS
@@ -40,16 +41,10 @@ void InitApp(void)
                 USART_ASYNCH_MODE |
                 USART_EIGHT_BIT |
                 USART_CONT_RX |
-                USART_BRGH_HIGH, 51);
+                USART_BRGH_HIGH |
+                TX_PRIORITY_ON |
+                RX_PRIORITY_ON,
+                SPBRG_VAL);
 
-    // 51 = 9600
-    // 12 = 38400
-    
-    /* Configure the IPEN bit (1=on) in RCON to turn on/off int priorities */
-    RCONbits.IPEN = 1;
-    
-    /* Enable interrupts */
-    INTCONbits.GIEL = 1;
-    INTCONbits.GIEH = 1;
 }
 

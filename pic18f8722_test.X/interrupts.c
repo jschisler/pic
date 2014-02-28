@@ -14,6 +14,7 @@
 
 #include <stdint.h>         /* For uint8_t definition */
 #include <stdbool.h>        /* For true/false definition */
+#include <usart.h>
 
 #include "states.h"
 
@@ -42,15 +43,20 @@ void high_isr(void)
       time errors. */
     BYTE ch;
 
-    if (PIE1bits.TX1IE && PIR1bits.TX1IF)
-    {
-        //  This is a test just to see if it gets into this interrupt.
-        PIE1bits.TX1IE = 0;
-        TXREG = 0x55;
-    }
-    else if (PIE1bits.RC1IE && PIR1bits.RC1IF)
-    {
-        ch = RCREG1;
+    if (PIE1bits.TX1IE) {
+        if (PIR1bits.TX1IF) {
+            if (!Busy1USART())
+                TXREG = 0x55;
+        }
+    } else if (PIE1bits.RC1IE) {
+        if(RCSTA1bits.FERR) {
+            ch = RCREG1;
+        } else if (RCSTA1bits.OERR) {
+            RCSTA1bits.CREN = 0;
+            RCSTA1bits.CREN = 1;
+        } else if (PIR1bits.RC1IF) {
+            ch = RCREG1;
+        }
     }
 #if 0
     
