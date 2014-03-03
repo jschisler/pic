@@ -23,6 +23,8 @@
 #include "system.h"        /* System funct/params, like osc/peripheral config */
 #include "user.h"          /* User funct/params, such as InitApp */
 
+#include "UARTIntC.h"
+
 /******************************************************************************/
 /* User Global Variable Declaration                                           */
 /******************************************************************************/
@@ -35,6 +37,11 @@
 
 void main(void)
 {
+    char packet[] = {'T', 'e', 's', 't'};
+
+    unsigned char i = 0;
+    unsigned char packet_size = sizeof (packet) / sizeof (packet[0]);
+
     /* Configure the oscillator for the device */
     ConfigureOscillator();
 
@@ -42,9 +49,17 @@ void main(void)
     InitApp();
 
     /* TODO <INSERT USER APPLICATION CODE HERE> */
-
+    
     while(1)
     {
+        i = 0;
+        
+        do {
+            UARTIntPutChar(packet[i++]);
+        } while (i < packet_size);
+
+        while (!vUARTIntStatus.UARTIntTxBufferEmpty);
+
         Delay10KTCYx(1000);
     }
 

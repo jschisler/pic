@@ -1,9 +1,11 @@
-_ConfigureOscillator: CODE, 490 0 2
-_main: CODE, 458 0 16
-_high_isr: CODE, 8 0 306
-_InitApp: CODE, 474 0 16
-__initialization: CODE, 440 0 12
-_Delay10KTCYx: CODE, 416 0 24
-_Open1USART: CODE, 314 0 102
+_ConfigureOscillator: CODE, 806 0 16
+_main: CODE, 576 0 92
+_UARTIntISR: CODE, 166 0 204
+_UARTIntInit: CODE, 482 0 94
+_high_isr: CODE, 8 0 474
+_InitApp: CODE, 822 0 6
+__initialization: CODE, 732 0 44
+_UARTIntPutChar: CODE, 668 0 64
+_Delay10KTCYx: CODE, 782 0 24
 _low_isr: CODE, 24 0 138
-Total: 616
+Total: 1156

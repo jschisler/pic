@@ -24,6 +24,8 @@ oscillator configurations. */
 void ConfigureOscillator(void)
 {
     /* TODO Add clock switching code if appropriate.  */
+    OSCCONbits.SCS = 0b10; // System Clock Select bits - Internal oscillator block
+    OSCCONbits.IRCF = 0b111; // Internal Oscillator Frequency Select bits - 8 MHz (INTOSC drives clock directly)
 
     /* Typical actions in this function are to tweak the oscillator tuning
     register, select new clock sources, and to wait until new clock sources

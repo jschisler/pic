@@ -36,6 +36,9 @@ void InitApp(void)
     /* Setup analog functionality and port direction */
 
     /* Initialize peripherals */
+    UARTIntInit();
+    
+    /*
     Open1USART( USART_TX_INT_ON |
                 USART_RX_INT_ON |
                 USART_ASYNCH_MODE |
@@ -45,6 +48,6 @@ void InitApp(void)
                 TX_PRIORITY_ON |
                 RX_PRIORITY_ON,
                 SPBRG_VAL);
-
+                */
 }
 

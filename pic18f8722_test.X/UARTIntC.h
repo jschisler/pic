@@ -72,8 +72,8 @@
 // the ISR location in the main application.
 //   Can they be MPAM module parameters?		
 #define BRGH_VAL		1
-#define TX_PRIORITY_ON	0
-#define RX_PRIORITY_ON	0
+#define TX_PRIORITY_ON	1
+#define RX_PRIORITY_ON	1
 
 // More error check to be done and the following
 // code can be modified.

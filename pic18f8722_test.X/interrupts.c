@@ -17,6 +17,7 @@
 #include <usart.h>
 
 #include "states.h"
+#include "UARTIntC.h"
 
 #endif
 
@@ -41,6 +42,8 @@ void high_isr(void)
       conditional statements are not handled within 3 seperate if blocks.
       Do not use a seperate if block for each interrupt flag to avoid run
       time errors. */
+    UARTIntISR();
+    /*
     BYTE ch;
 
     if (PIE1bits.TX1IE) {
@@ -58,6 +61,7 @@ void high_isr(void)
             ch = RCREG1;
         }
     }
+    */
 #if 0
     
       /* TODO Add High Priority interrupt routine code here. */

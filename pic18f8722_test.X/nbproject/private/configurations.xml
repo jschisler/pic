@@ -4,7 +4,7 @@
   <defaultConf>0</defaultConf>
   <confs>
     <conf name="C18_18F8722" type="2">
-      <platformToolSN>:=MPLABComm-USB-Microchip:=&lt;vid>04D8:=&lt;pid>9004:=&lt;rev>0100:=&lt;man>Microchip Technology, Inc. (www.microchip.com):=&lt;prod>MPLAB REAL ICE tm (www.microchip.com):=&lt;sn>JIT132610233:=&lt;drv>x:=&lt;xpt>b:=end</platformToolSN>
+      <platformToolSN>:=MPLABCommUSB:=04D8:=9009:=0100:=Microchip Technology, Inc. (www.microchip.com):=MPLAB ICD3 tm (www.microchip.com):=JIT134411877:=x:=b:=en</platformToolSN>
       <languageToolchainDir>C:\Program Files (x86)\Microchip\xc8\v1.30\bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
@@ -59,7 +59,7 @@
     </conf>
     <conf name="C18_18F1220" type="2">
       <platformToolSN></platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\mplabc18\v3.40\bin</languageToolchainDir>
+      <languageToolchainDir>C:\Program Files (x86)\Microchip\mplabc18\v3.46\bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
         <placeholder2>place holder 2</placeholder2>
@@ -113,7 +113,7 @@
     </conf>
     <conf name="C18_18F14K50" type="2">
       <platformToolSN></platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\mplabc18\v3.40\bin</languageToolchainDir>
+      <languageToolchainDir>C:\Program Files (x86)\Microchip\mplabc18\v3.46\bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
         <placeholder2>place holder 2</placeholder2>
@@ -167,7 +167,7 @@
     </conf>
     <conf name="C18_18F46J11" type="2">
       <platformToolSN></platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\mplabc18\v3.40\bin</languageToolchainDir>
+      <languageToolchainDir>C:\Program Files (x86)\Microchip\mplabc18\v3.46\bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
         <placeholder2>place holder 2</placeholder2>
@@ -221,7 +221,7 @@
     </conf>
     <conf name="C18_18F87J60" type="2">
       <platformToolSN></platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\mplabc18\v3.40\bin</languageToolchainDir>
+      <languageToolchainDir>C:\Program Files (x86)\Microchip\mplabc18\v3.46\bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
         <placeholder2>place holder 2</placeholder2>
