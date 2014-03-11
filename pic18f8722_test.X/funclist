@@ -1,11 +1,20 @@
-_ConfigureOscillator: CODE, 1256 0 16
-_main: CODE, 166 0 370
-_UARTIntISR: CODE, 536 0 244
-_UARTIntInit: CODE, 780 0 142
-_high_isr: CODE, 8 0 1026
-_InitApp: CODE, 1286 0 6
-__initialization: CODE, 1202 0 48
-_UARTIntGetChar: CODE, 1034 0 86
-_UARTIntPutChar: CODE, 1120 0 82
+_lcdCommand: CODE, 4980 0 106
+_lcdChar: CODE, 5190 0 100
+_lcdGoTo: CODE, 5612 0 18
+__stringdata: SMALLCONST, 4097 0 11
+_OpenSPI1: CODE, 5086 0 104
+_ConfigureOscillator: CODE, 5630 0 16
+_main: CODE, 4110 0 372
+_UARTIntISR: CODE, 4482 0 244
+_UARTIntInit: CODE, 4726 0 142
+_high_isr: CODE, 8 0 4972
+_InitApp: CODE, 5660 0 6
+__initialization: CODE, 5438 0 48
+_UARTIntGetChar: CODE, 5290 0 86
+_Delay10TCYx: CODE, 5590 0 22
+_setGPIO: CODE, 5528 0 36
+_WriteSPI1: CODE, 5564 0 26
+_setIODIR: CODE, 5492 0 36
 _low_isr: CODE, 24 0 138
-Total: 2158
+_lcdWriteString: CODE, 5376 0 62
+Total: 6545
